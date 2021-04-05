@@ -1,0 +1,12 @@
+---
+- name: Install mariadb services 
+  yum:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - mariadb
+    - mariadb-server
+- name: start the mariadb
+  service:
+    name: mariadb
+    state: started
