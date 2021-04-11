@@ -1,4 +1,0 @@
----
-- import_playbook: nfsinstall.yml
-- import_playbook: nfsserver.yml
-- import_playbook: nfsclient.yml
