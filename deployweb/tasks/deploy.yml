@@ -1,5 +1,6 @@
 ---
 - name: Copy the code to app servers
+  become: true
   copy:
-    src: static-website
+    src: /home/Ansible/static-website
     dest: /var/www/html/

@@ -1,0 +1,6 @@
+---
+# tasks file for webhosting
+
+- include_tasks: stop.yml
+- include_tasks: deployweb.yml
+- include_tasks: restart.yml

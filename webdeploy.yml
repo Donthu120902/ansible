@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: App
   become: yes
   roles: 
   - deployweb

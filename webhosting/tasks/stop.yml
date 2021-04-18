@@ -1,0 +1,6 @@
+---
+- name: Stop the tomcat 
+  systemd: 
+    name: tomcat
+    state: stopped
+

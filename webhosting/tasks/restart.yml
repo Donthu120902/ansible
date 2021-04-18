@@ -1,0 +1,6 @@
+---
+- name: Restart tomcat and enable 
+  systemd:
+    name: tomcat
+    state: started
+    enabled: yes

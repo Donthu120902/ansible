@@ -1,0 +1,6 @@
+---
+- name: copy the war files on the tocat
+  copy:
+    src: /var/lib/jenkins/workspace/WebApp-Ansible/target/*.war
+    dest: /opt/tomcat/webapps/
+
