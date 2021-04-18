@@ -1,0 +1,18 @@
+---
+- hosts: localhost
+  become: true
+  tasks:
+    - name: Create a directory
+      file:
+        path: /nfsshare
+        state: directory
+        mode: 0755
+    - name: configure the nfs
+      become: true
+      lineinfile:
+        path: /etc/exports
+        line: '/nfsshare 172.31.44.228(rw,sync,no_root_squash)'
+    - name: Restart the nfs services
+      systemd:
+        name: nfs
+        state: restarted
