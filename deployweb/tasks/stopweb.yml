@@ -1,0 +1,5 @@
+---
+- name: Stop the httpd services 
+  systemd:
+    name: httpd
+    state: stopped 

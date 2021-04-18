@@ -1,0 +1,5 @@
+---
+- name: Copy the code to app servers
+  copy:
+    src: static-website
+    dest: /var/www/html/

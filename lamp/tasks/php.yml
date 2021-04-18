@@ -1,0 +1,14 @@
+---
+- name: Install Php modules
+  yum: 
+    name: "{{ item }}"
+    state: present
+  loop:
+    - php
+    - php-mysql
+- name: copy Php info file 
+  copy:
+    src: phpinfo.php
+    dest: /var/www/html
+  notify:
+  - restart apache service

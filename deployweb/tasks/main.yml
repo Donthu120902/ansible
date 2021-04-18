@@ -1,0 +1,5 @@
+---
+# tasks file for deployweb
+- include_tasks: stopweb.yml
+- include_tasks: deploy.yml
+- include_tasks: startweb.yml

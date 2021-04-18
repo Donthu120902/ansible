@@ -1,0 +1,16 @@
+---
+- name: Install Apache services
+  yum:
+    name: httpd
+    state: present
+- name: start and enable apache services
+  systemd:
+    name: httpd
+    state: started
+    enabled: yes
+- name: copy The index files
+  copy:
+    src: index.html
+    dest: /var/www/html
+  notify:
+  - restart apache service
