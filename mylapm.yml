@@ -1,5 +1,5 @@
 ---
-- hosts: Node1
+- hosts: lamp
   become: true
   roles:
   - lamp
